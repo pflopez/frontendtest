@@ -1,11 +1,17 @@
 # Chess.com - Front End Programming Challenge
 
-Welcome to the [Chess.com](https://chess.com) front end programming challenge!
+### Compile and Hot-Reload for Development
 
-# Instructions
-1. Fork this repository.
-2. Create a VueJS application that satisfies the requirements detailed below.
-3. Provide links to your fork of this repository and a live demo of your application.
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
 
 # Application Requirements
 1. Create a page with a chessboard and a sidebar.
@@ -16,5 +22,5 @@ Welcome to the [Chess.com](https://chess.com) front end programming challenge!
 6. Keep track of which squares are clicked and the order in which they're clicked.
 7. Display the information collected from step 6 in the sidebar.
 
-# Questions & Feedback
-Please contact Nick Kampa (nkampa@chess.com) with any questions or feedback regarding this challenge.
+# Notes
+Icon from [Pictogrammers Team](https://www.iconarchive.com/show/material-icons-by-pictogrammers/checkerboard-icon.html#google_vignette)
