@@ -4,9 +4,7 @@
   --app-text-black: #43413e;
 
   --app-light-gray: #ececec;
-  --app-light-gray-transparent: #ececec00;
   --app-dark-gray: #232323;
-  --app-dark-gray-transparent: #23232300;
 
   --app-dark-green: #779656;
   --app-light-green: #eeeed2;
@@ -34,7 +32,6 @@
 
   --color-text: var(--app-text-black);
   --color-sidebar: var(--app-light-gray);
-  --color-sidebar-transparent: var(--app-light-gray-transparent);
   --sidebar-border: var(--app-gray-light-border);
 }
 
@@ -50,7 +47,6 @@
 
     --color-text: var(--app-white);
     --color-sidebar: var(--app-dark-gray);
-    --color-sidebar-transparent: var(--app-dark-gray-transparent);
     --sidebar-border: var(--app-gray-dark-border);
   }
 }
@@ -62,7 +58,8 @@
   margin: 0;
   font-weight: normal;
 }
-html, body{
+html,
+body {
   height: 100%;
 }
 

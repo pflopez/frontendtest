@@ -26,14 +26,14 @@ export default defineComponent({
 
 <style scoped>
 .side {
-  overflow-y: scroll;
+  overflow: hidden;
   background-color: var(--color-sidebar);
+
+  display: flex;
+  flex-direction: column;
 }
 .title {
-  padding: 20px;
-  background: linear-gradient(0, var(--color-sidebar-transparent), var(--color-sidebar) 20%);
-  position: sticky;
-  top: 0;
+  padding: 10px;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -41,6 +41,8 @@ export default defineComponent({
   list-style: none;
   padding: 0 20px 20px;
   font-variant-numeric: tabular-nums;
+  overflow-y: scroll;
+  height: 100%;
 }
 .activity b {
   font-weight: bold;

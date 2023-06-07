@@ -78,5 +78,4 @@ export default defineComponent({
 .square.active {
   background-color: var(--color-active-square);
 }
-
 </style>

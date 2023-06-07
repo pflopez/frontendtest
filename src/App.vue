@@ -43,6 +43,7 @@ export default defineComponent({
 <style scoped>
 .side-bar {
   flex: 1;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 576px) {
@@ -59,9 +60,10 @@ export default defineComponent({
     max-width: calc(100svh - 40px);
   }
   .side-bar {
-    flex: 1;
     min-width: 180px;
     border-left: 1px solid var(--sidebar-border);
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
 }
 </style>
