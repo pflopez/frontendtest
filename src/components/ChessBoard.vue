@@ -15,15 +15,19 @@ export default defineComponent({
   methods: {
     activateSquare(square: Square) {
       this.$emit('setActive', square);
+    },
+    squareColor(index: number){
+      const modResult = index % 16 < 8 ? 1 : 0;
+      return index % 2 === modResult ? 'dark' : 'light';
     }
-  }
+  },
 });
 </script>
 
 <template>
   <section class="board">
-    <div v-for="square in squares" :key="square.key" class="square" @click="activateSquare(square)">
-      {{ square.file }}{{ square.rank }}
+    <div v-for="(square, index) in squares" :key="square.key" class="square" :class="squareColor(index)" @click="activateSquare(square)">
+      {{ square.key }}
     </div>
   </section>
 </template>
@@ -45,14 +49,7 @@ export default defineComponent({
   color: var(--color-text-square);
 }
 
-.square:nth-child(16n + 2),
-.square:nth-child(16n + 4),
-.square:nth-child(16n + 6),
-.square:nth-child(16n + 8),
-.square:nth-child(16n + 9),
-.square:nth-child(16n + 11),
-.square:nth-child(16n + 13),
-.square:nth-child(16n + 15) {
+.square.dark {
   background-color: var(--color-dark-square);
 }
 
