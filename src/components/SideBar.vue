@@ -31,7 +31,7 @@ export default defineComponent({
 }
 .title {
   padding: 20px;
-  background: linear-gradient(0, transparent, var(--color-sidebar) 20%);
+  background: linear-gradient(0, var(--color-sidebar-transparent), var(--color-sidebar) 20%);
   position: sticky;
   top: 0;
   font-weight: bold;

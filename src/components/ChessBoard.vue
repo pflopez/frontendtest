@@ -39,9 +39,7 @@ export default defineComponent({
       class="square"
       :class="[isSquareActive(square) ? 'active' : '', squareColor(index)]"
       @click="activateSquare(square)"
-    >
-      {{ square.key }}
-    </button>
+    ></button>
   </section>
 </template>
 
@@ -81,10 +79,4 @@ export default defineComponent({
   background-color: var(--color-active-square);
 }
 
-@media (max-width: 250px) {
-  /* remove text on the tiniest size so the board doesn't render weirdly */
-  .square{
-   font-size: 0;
-  }
-}
 </style>
