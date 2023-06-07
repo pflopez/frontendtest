@@ -10,13 +10,25 @@ export default defineComponent({
       required: true,
       type: Array as PropType<Activity[]>
     }
+  },
+  computed: {
+    activitySize() {
+      return this.activity.length;
+    }
+  },
+  watch: {
+    activitySize() {
+      // scroll to the last one
+      const el = this.$refs.activityScroller as HTMLElement;
+      el.scrollTop = el.scrollHeight;
+    }
   }
 });
 </script>
 <template>
   <aside class="side">
     <h3 class="title">Squares clicked:</h3>
-    <ul class="activity">
+    <ul class="activity" ref="activityScroller">
       <li v-for="item in activity" :key="item.id">
         {{ item.id }}: <b>{{ item.square.key }}</b> - {{ item.on ? 'on' : 'off' }}
       </li>
@@ -39,7 +51,7 @@ export default defineComponent({
 }
 .activity {
   list-style: none;
-  padding: 0 20px 20px;
+  padding: 0 var(--app-padding-lg) var(--app-padding-lg);
   font-variant-numeric: tabular-nums;
   overflow-y: scroll;
   height: 100%;

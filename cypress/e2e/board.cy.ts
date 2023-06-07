@@ -7,6 +7,7 @@ describe('Chessboard', () => {
     cy.get('.square').eq(15).contains('h7');
     cy.get('.square').last().contains('h1');
   });
+
   it('renders the checkerboard pattern', () => {
     cy.visit('/');
     cy.get('.square').first().should('have.class', 'light');
@@ -15,6 +16,7 @@ describe('Chessboard', () => {
     cy.get('.square').eq(15).should('have.class', 'light');
     cy.get('.square').last().should('have.class', 'light');
   });
+
   it('highlights the square after click', () => {
     cy.visit('/');
     cy.get('.square').first().click();

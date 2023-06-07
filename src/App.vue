@@ -42,6 +42,7 @@ export default defineComponent({
   </main>
   <side-bar :activity="activity" class="side-bar"></side-bar>
 </template>
+
 <style scoped>
 .side-bar {
   flex: 1;
@@ -58,6 +59,7 @@ export default defineComponent({
     border-radius: 4px;
     overflow: hidden;
     max-width: calc(100vh - 40px);
+    /* smaller viewport height where supported */
     max-width: calc(100svh - 40px);
   }
   .side-bar {
