@@ -1,34 +1,48 @@
 :root {
   --app-white: #f6f4f0;
   --app-black: #302e2b;
+  --app-text-black: #43413e;
 
-  --app-light-gray: #e0e0e0;
-  --app-dark-gray: #a0a0a0;
+  --app-light-gray: #ececec;
+  --app-dark-gray: #232323;
 
   --app-dark-green: #779656;
   --app-light-green: #eeeed2;
+  --app-gray-green: #6e7d5f;
 
   --app-dark-brown: #d18b47;
   --app-light-brown: #ffce9e;
+  --app-gray-brown: #a6876a;
 
-  --app-gray: #ececec;
-  --app-gray-border: #e0e0e0;
+  --app-gray-light-border: #e0e0e0;
+  --app-gray-dark-border: #505050;
 }
 
 :root {
   --color-background: var(--app-white);
+
   --color-light-square: var(--app-light-brown);
   --color-dark-square: var(--app-dark-brown);
-  --color-text: var(--app-black);
-  --color-sidebar: var(--app-white);
+  --color-active-square: var(--app-gray-brown);
+  --color-text-square: var(--app-text-black);
+
+  --color-text: var(--app-text-black);
+  --color-sidebar: var(--app-light-gray);
+  --sidebar-border: var(--app-gray-light-border);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--app-black);
+
     --color-light-square: var(--app-light-green);
     --color-dark-square: var(--app-dark-green);
-    --color-text: var(--app-white)
+    --color-active-square: var(--app-gray-green);
+    --color-text-square: var(--app-dark-gray);
+
+    --color-text: var(--app-white);
+    --color-sidebar: var(--app-dark-gray);
+    --sidebar-border: var(--app-gray-dark-border);
   }
 }
 
@@ -52,5 +66,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
-  ;
 }

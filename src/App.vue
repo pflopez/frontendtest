@@ -2,15 +2,15 @@
 import { defineComponent } from 'vue';
 import ChessBoard from '@/components/ChessBoard.vue';
 import { boardSquares } from '@/board';
-import SideBar from "@/components/SideBar.vue";
-import {Activity} from "@/types/activity";
-import {Square} from "@/types/square";
+import SideBar from '@/components/SideBar.vue';
+import { Activity } from '@/types/activity';
+import { Square } from '@/types/square';
 
 const activity: Activity[] = [];
 
 export default defineComponent({
   name: 'App',
-  components: {SideBar, ChessBoard },
+  components: { SideBar, ChessBoard },
   methods: {
     setActive(square: Square) {
       const time = new Date();
@@ -28,29 +28,29 @@ export default defineComponent({
   <main>
     <chess-board :squares="boardSquares" @setActive="setActive" class="chess-board"></chess-board>
   </main>
-
   <side-bar :activity="activity" class="side-bar"></side-bar>
 </template>
 <style scoped>
+.side-bar {
+  flex: 1;
+}
 
-  @media (min-width: 576px) {
-    main {
-      flex:4;
-      padding: 20px;
-    }
-
-    .chess-board  {
-      margin: auto;
-      border-radius: 4px;
-      overflow: hidden;
-      max-width: calc(100vh - 40px);
-    }
-    .side-bar {
-      --color-sidebar: var(--app-gray);
-      flex: 1;
-      max-width: 300px;
-      border-left: 1px solid var(--app-gray-border);
-    }
+@media (min-width: 576px) {
+  main {
+    flex: 4;
+    padding: 20px;
   }
 
+  .chess-board {
+    margin: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: calc(100vh - 40px);
+  }
+  .side-bar {
+    flex: 1;
+    min-width: 180px;
+    border-left: 1px solid var(--sidebar-border);
+  }
+}
 </style>

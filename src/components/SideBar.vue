@@ -17,32 +17,32 @@ export default defineComponent({
   <aside class="side">
     <h3 class="title">Squares clicked:</h3>
     <ul class="activity">
-      <li v-for="item in activity" :key="item.id">{{ item.id }}: {{ item.square.key }}</li>
+      <li v-for="item in activity" :key="item.id">
+        {{ item.id }}: <b>{{ item.square.key }}</b>
+      </li>
     </ul>
   </aside>
 </template>
 
 <style scoped>
-.side{
+.side {
   overflow-y: scroll;
   background-color: var(--color-sidebar);
 }
 .title {
-  padding: 10px;
-  background: linear-gradient(0, transparent , var(--color-sidebar) 20%);
+  padding: 20px;
+  background: linear-gradient(0, transparent, var(--color-sidebar) 20%);
   position: sticky;
-  top:0;
+  top: 0;
   font-weight: bold;
+  white-space: nowrap;
 }
-.activity{
+.activity {
   list-style: none;
   padding: 0 20px 20px;
+  font-variant-numeric: tabular-nums;
 }
-
-@media (min-width: 576px) {
-  main {
-    flex:4;
-    padding: 20px;
-  }
+.activity b {
+  font-weight: bold;
 }
 </style>

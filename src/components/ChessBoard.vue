@@ -40,12 +40,10 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--app-black);
   cursor: pointer;
   user-select: none;
+  color: var(--color-text-square);
 }
-
-
 
 .square:nth-child(16n + 2),
 .square:nth-child(16n + 4),
@@ -58,8 +56,7 @@ export default defineComponent({
   background-color: var(--color-dark-square);
 }
 
-.square:active{
-  /*todo style this*/
-  background-color: white;
+.square:active {
+  background-color: var(--color-active-square);
 }
 </style>
