@@ -7,24 +7,26 @@ import { type Activity } from '@/types/activity';
 import { type Square } from '@/types/square';
 
 const activity: Activity[] = [];
+const activeSquares: string[] = [];
 
 export default defineComponent({
   name: 'App',
   components: { SideBar, ChessBoard },
   methods: {
     setActive(square: Square) {
-      const time = new Date();
       const id = this.activity.length + 1;
-      this.activity.push({ square, time, id });
+      const prevActivity = this.activity.filter((activity) => activity.square === square);
+      const on = !prevActivity[prevActivity.length - 1]?.on;
+      this.activity.push({ id, square, on });
+      if (on) {
+        this.activeSquares.push(square.key);
+      } else {
+        this.activeSquares = this.activeSquares.filter((key) => key !== square.key);
+      }
     }
   },
   data() {
-    return { boardSquares, activity };
-  },
-  computed: {
-    getActiveSquares(): string[] {
-      return this.activity.map((activity) => activity.square.key);
-    }
+    return { boardSquares, activity, activeSquares };
   }
 });
 </script>
@@ -35,7 +37,7 @@ export default defineComponent({
       :squares="boardSquares"
       @setActive="setActive"
       class="chess-board"
-      :active-squares="getActiveSquares"
+      :active-squares="activeSquares"
     ></chess-board>
   </main>
   <side-bar :activity="activity" class="side-bar"></side-bar>

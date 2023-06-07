@@ -32,4 +32,19 @@ describe('Chessboard', () => {
     cy.get('.square').last().click();
     cy.get('.square').last().should('have.class', 'active');
   });
+
+  it('removes highlights on the square after click again', () => {
+    cy.visit('/');
+    cy.get('.square').first().click();
+    cy.get('.square').first().click();
+    cy.get('.square').first().should('not.have.class', 'active');
+
+    cy.get('.square').eq(7).click();
+    cy.get('.square').eq(8).click();
+    cy.get('.square').eq(15).click();
+    cy.get('.square').eq(7).click();
+
+    cy.get('.square').eq(7).should('not.have.class', 'active');
+    cy.get('.square').eq(15).should('have.class', 'active');
+  });
 });

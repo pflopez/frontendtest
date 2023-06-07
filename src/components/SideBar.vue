@@ -18,7 +18,7 @@ export default defineComponent({
     <h3 class="title">Squares clicked:</h3>
     <ul class="activity">
       <li v-for="item in activity" :key="item.id">
-        {{ item.id }}: <b>{{ item.square.key }}</b>
+        {{ item.id }}: <b>{{ item.square.key }}</b> - {{ item.on ? 'on' : 'off' }}
       </li>
     </ul>
   </aside>
