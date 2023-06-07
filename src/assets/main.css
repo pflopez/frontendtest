@@ -8,6 +8,9 @@
 
 @media (min-width: 576px) {
   #app {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: minmax(min-content, 100vh) minmax(200px, 1fr);
+    margin: auto;
+    max-width: 1200px;
   }
 }

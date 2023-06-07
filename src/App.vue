@@ -50,7 +50,6 @@ export default defineComponent({
 
 @media (min-width: 576px) {
   main {
-    flex: 4;
     padding: 20px;
   }
 
@@ -62,7 +61,6 @@ export default defineComponent({
     max-width: calc(100svh - 40px);
   }
   .side-bar {
-    min-width: 180px;
     border-left: 1px solid var(--sidebar-border);
     padding-top: 10px;
     padding-bottom: 20px;

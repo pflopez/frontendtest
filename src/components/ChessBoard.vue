@@ -39,7 +39,9 @@ export default defineComponent({
       class="square"
       :class="[isSquareActive(square) ? 'active' : '', squareColor(index)]"
       @click="activateSquare(square)"
-    >{{ square.key }}</button>
+    >
+      {{ square.key }}
+    </button>
   </section>
 </template>
 
