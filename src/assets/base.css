@@ -1,21 +1,33 @@
 :root {
-  --app-white: #f9f9f9;
-  --app-black: #404040;
+  --app-white: #f6f4f0;
+  --app-black: #302e2b;
 
   --app-light-gray: #e0e0e0;
   --app-dark-gray: #a0a0a0;
+
+  --app-dark-green: #779656;
+  --app-light-green: #eeeed2;
+
+  --app-dark-brown: #d18b47;
+  --app-light-brown: #ffce9e;
+
+  --app-gray: #ececec;
+  --app-gray-border: #e0e0e0;
 }
 
 :root {
   --color-background: var(--app-white);
-  --color-light-square: var(--app-light-gray);
-  --color-dark-square: var(--app-dark-gray);
-  --color-text: var(--app-black)
+  --color-light-square: var(--app-light-brown);
+  --color-dark-square: var(--app-dark-brown);
+  --color-text: var(--app-black);
+  --color-sidebar: var(--app-white);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--app-black);
+    --color-light-square: var(--app-light-green);
+    --color-dark-square: var(--app-dark-green);
     --color-text: var(--app-white)
   }
 }
@@ -29,7 +41,7 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   line-height: 1.6;
@@ -39,4 +51,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  ;
 }

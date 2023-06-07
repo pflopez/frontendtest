@@ -21,18 +21,17 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="board">
+  <section class="board">
     <div v-for="square in squares" :key="square.key" class="square" @click="activateSquare(square)">
       {{ square.file }}{{ square.rank }}
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
 .board {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  max-height: 90vh;
   aspect-ratio: 1;
 }
 .square {
@@ -41,7 +40,12 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--app-black);
+  cursor: pointer;
+  user-select: none;
 }
+
+
 
 .square:nth-child(16n + 2),
 .square:nth-child(16n + 4),
@@ -52,5 +56,10 @@ export default defineComponent({
 .square:nth-child(16n + 13),
 .square:nth-child(16n + 15) {
   background-color: var(--color-dark-square);
+}
+
+.square:active{
+  /*todo style this*/
+  background-color: white;
 }
 </style>
