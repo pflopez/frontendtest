@@ -1,4 +1,5 @@
 :root {
+  /* colors */
   --app-white: #f6f4f0;
   --app-black: #302e2b;
   --app-text-black: #43413e;
@@ -19,11 +20,16 @@
   --app-gray-light-border: #e0e0e0;
   --app-gray-dark-border: #505050;
   --app-active-border: #33333355;
+
+  /* sizes */
+  --app-min-sidebar-width: 200px;
+  --app-max-app-width: 1200px;
+  --app-padding-sm: 10px;
+  --app-padding-lg: 20px;
 }
 
 :root {
   --color-background: var(--app-white);
-
   --color-light-square: var(--app-light-brown);
   --color-dark-square: var(--app-dark-brown);
   --color-active-square: var(--yellow-brown);
@@ -38,7 +44,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--app-black);
-
     --color-light-square: var(--app-light-green);
     --color-dark-square: var(--app-dark-green);
     --color-active-square: var(--yellow-green);
@@ -61,6 +66,8 @@
 html,
 body {
   height: 100%;
+  overscroll-behavior: none;
+  overflow: hidden;
 }
 
 body {
@@ -73,5 +80,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }

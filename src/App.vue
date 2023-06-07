@@ -45,12 +45,12 @@ export default defineComponent({
 <style scoped>
 .side-bar {
   flex: 1;
-  padding-bottom: 10px;
+  padding-bottom: var(--app-padding-sm);
 }
 
 @media (min-width: 576px) {
   main {
-    padding: 20px;
+    padding: var(--app-padding-lg);
   }
 
   .chess-board {
@@ -62,8 +62,8 @@ export default defineComponent({
   }
   .side-bar {
     border-left: 1px solid var(--sidebar-border);
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: var(--app-padding-sm);
+    padding-bottom: var(--app-padding-lg);
   }
 }
 </style>

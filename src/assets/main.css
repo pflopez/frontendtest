@@ -9,8 +9,8 @@
 @media (min-width: 576px) {
   #app {
     display: grid;
-    grid-template-columns: minmax(min-content, 100vh) minmax(200px, 1fr);
+    grid-template-columns: minmax(min-content, 100vh) minmax(var(--app-min-sidebar-width), 1fr);
     margin: auto;
-    max-width: 1200px;
+    max-width: var(--app-max-app-width);
   }
 }

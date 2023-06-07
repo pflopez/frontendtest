@@ -60,8 +60,11 @@ export default defineComponent({
   justify-content: center;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
   color: var(--color-text-square);
   outline: none;
+  -webkit-tap-highlight-color: var(--color-active-square);
+  padding: 0;
 }
 .square:focus-visible {
   outline: none;
