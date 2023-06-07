@@ -58,9 +58,11 @@
   margin: 0;
   font-weight: normal;
 }
+html, body{
+  height: 100%;
+}
 
 body {
-  height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   line-height: 1.6;

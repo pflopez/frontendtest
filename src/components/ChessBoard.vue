@@ -80,4 +80,11 @@ export default defineComponent({
 .square.active {
   background-color: var(--color-active-square);
 }
+
+@media (max-width: 250px) {
+  /* remove text on the tiniest size so the board doesn't render weirdly */
+  .square{
+   font-size: 0;
+  }
+}
 </style>

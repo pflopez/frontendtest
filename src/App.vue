@@ -56,6 +56,7 @@ export default defineComponent({
     border-radius: 4px;
     overflow: hidden;
     max-width: calc(100vh - 40px);
+    max-width: calc(100svh - 40px);
   }
   .side-bar {
     flex: 1;
