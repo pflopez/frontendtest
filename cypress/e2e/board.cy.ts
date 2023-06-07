@@ -15,4 +15,21 @@ describe('Chessboard', () => {
     cy.get('.square').eq(15).should('have.class', 'light');
     cy.get('.square').last().should('have.class', 'light');
   });
+  it('highlights the square after click', () => {
+    cy.visit('/');
+    cy.get('.square').first().click();
+    cy.get('.square').first().should('have.class', 'active');
+
+    cy.get('.square').eq(7).click();
+    cy.get('.square').eq(7).should('have.class', 'active');
+
+    cy.get('.square').eq(8).click();
+    cy.get('.square').eq(8).should('have.class', 'active');
+
+    cy.get('.square').eq(15).click();
+    cy.get('.square').eq(15).should('have.class', 'active');
+
+    cy.get('.square').last().click();
+    cy.get('.square').last().should('have.class', 'active');
+  });
 });

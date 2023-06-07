@@ -20,13 +20,23 @@ export default defineComponent({
   },
   data() {
     return { boardSquares, activity };
+  },
+  computed: {
+    getActiveSquares(): string[] {
+      return this.activity.map((activity) => activity.square.key);
+    }
   }
 });
 </script>
 
 <template>
   <main>
-    <chess-board :squares="boardSquares" @setActive="setActive" class="chess-board"></chess-board>
+    <chess-board
+      :squares="boardSquares"
+      @setActive="setActive"
+      class="chess-board"
+      :active-squares="getActiveSquares"
+    ></chess-board>
   </main>
   <side-bar :activity="activity" class="side-bar"></side-bar>
 </template>

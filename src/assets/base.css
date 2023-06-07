@@ -8,14 +8,17 @@
 
   --app-dark-green: #779656;
   --app-light-green: #eeeed2;
-  --app-gray-green: #6e7d5f;
+  --yellow-green: #f7f786;
+  --yellow-green-dark: #bbca41;
 
   --app-dark-brown: #d18b47;
   --app-light-brown: #ffce9e;
-  --app-gray-brown: #a6876a;
+  --yellow-brown: #f8ed75;
+  --yellow-dark-brown: #dac349;
 
   --app-gray-light-border: #e0e0e0;
   --app-gray-dark-border: #505050;
+  --app-active-border: #33333355;
 }
 
 :root {
@@ -23,7 +26,8 @@
 
   --color-light-square: var(--app-light-brown);
   --color-dark-square: var(--app-dark-brown);
-  --color-active-square: var(--app-gray-brown);
+  --color-active-square: var(--yellow-brown);
+  --color-dark-active-square: var(--yellow-dark-brown);
   --color-text-square: var(--app-text-black);
 
   --color-text: var(--app-text-black);
@@ -37,7 +41,8 @@
 
     --color-light-square: var(--app-light-green);
     --color-dark-square: var(--app-dark-green);
-    --color-active-square: var(--app-gray-green);
+    --color-active-square: var(--yellow-green);
+    --color-dark-active-square: var(--yellow-green-dark);
     --color-text-square: var(--app-dark-gray);
 
     --color-text: var(--app-white);
