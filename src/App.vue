@@ -3,8 +3,8 @@ import { defineComponent } from 'vue';
 import ChessBoard from '@/components/ChessBoard.vue';
 import { boardSquares } from '@/board';
 import SideBar from '@/components/SideBar.vue';
-import { Activity } from '@/types/activity';
-import { Square } from '@/types/square';
+import { type Activity } from '@/types/activity';
+import { type Square } from '@/types/square';
 
 const activity: Activity[] = [];
 

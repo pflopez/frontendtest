@@ -1,6 +1,6 @@
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
-import { Activity } from '@/types/activity';
+import { defineComponent, type PropType } from 'vue';
+import { type Activity } from '@/types/activity';
 
 export default defineComponent({
   name: 'SideBar',

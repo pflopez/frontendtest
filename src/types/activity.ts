@@ -1,4 +1,4 @@
-import { Square } from '@/types/square';
+import { type Square } from '@/types/square';
 
 export interface Activity {
   id: number;

@@ -1,6 +1,6 @@
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
-import { Square } from '@/types/square';
+import { defineComponent, type PropType } from 'vue';
+import { type Square } from '@/types/square';
 
 export default defineComponent({
   name: 'ChessBoard',
