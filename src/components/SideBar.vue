@@ -1,10 +1,11 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue';
 import { type Activity } from '@/types/activity';
+import ThemeToggle from '@/components/themeToggle.vue';
 
 export default defineComponent({
   name: 'SideBar',
-  components: {},
+  components: { ThemeToggle },
   props: {
     activity: {
       required: true,
@@ -27,6 +28,7 @@ export default defineComponent({
 </script>
 <template>
   <aside class="side">
+    <theme-toggle class="theme-toggle"></theme-toggle>
     <h3 class="title">Squares clicked:</h3>
     <ul class="activity" ref="activityScroller">
       <li v-for="item in activity" :key="item.id">
@@ -40,9 +42,9 @@ export default defineComponent({
 .side {
   overflow: hidden;
   background-color: var(--color-sidebar);
-
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .title {
   padding: var(--app-padding-lg) var(--app-padding-lg) var(--app-padding-sm);
@@ -59,5 +61,10 @@ export default defineComponent({
 }
 .activity b {
   font-weight: bold;
+}
+.theme-toggle {
+  position: absolute;
+  top: calc(100% - 50px);
+  right: 20px;
 }
 </style>

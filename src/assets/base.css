@@ -28,7 +28,8 @@
   --app-padding-lg: 20px;
 }
 
-:root {
+:root,
+html.light {
   --color-background: var(--app-white);
   --color-light-square: var(--app-light-brown);
   --color-dark-square: var(--app-dark-brown);
@@ -56,6 +57,19 @@
   }
 }
 
+html.dark {
+  --color-background: var(--app-black);
+  --color-light-square: var(--app-light-green);
+  --color-dark-square: var(--app-dark-green);
+  --color-active-square: var(--yellow-green);
+  --color-dark-active-square: var(--yellow-green-dark);
+  --color-text-square: var(--app-dark-gray);
+
+  --color-text: var(--app-white);
+  --color-sidebar: var(--app-dark-gray);
+  --sidebar-border: var(--app-gray-dark-border);
+}
+
 *,
 *::before,
 *::after {
@@ -72,11 +86,12 @@ body {
 
 body {
   color: var(--color-text);
-  background: var(--color-background);
+  background-color: var(--color-background);
   line-height: 1.6;
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
