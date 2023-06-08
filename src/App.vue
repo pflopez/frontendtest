@@ -57,16 +57,6 @@ export default defineComponent({
     margin: auto;
     border-radius: 4px;
     overflow: hidden;
-    min-width: 50vh;
-    max-width: 70vw;
-  }
-}
-
-@media (min-width: 768px) {
-  .chess-board {
-    margin: auto;
-    border-radius: 4px;
-    overflow: hidden;
     max-width: calc(100vh - 40px);
     /* smaller viewport height where supported */
     max-width: calc(100svh - 40px);

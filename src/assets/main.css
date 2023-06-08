@@ -6,7 +6,7 @@
   height: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   #app {
     display: grid;
     grid-template-columns: minmax(min-content, 100vh) minmax(var(--app-min-sidebar-width), 1fr);

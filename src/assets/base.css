@@ -28,7 +28,6 @@
   --app-padding-lg: 20px;
 }
 
-:root,
 html.light {
   --color-background: var(--app-white);
   --color-light-square: var(--app-light-brown);
@@ -40,21 +39,6 @@ html.light {
   --color-text: var(--app-text-black);
   --color-sidebar: var(--app-light-gray);
   --sidebar-border: var(--app-gray-light-border);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--app-black);
-    --color-light-square: var(--app-light-green);
-    --color-dark-square: var(--app-dark-green);
-    --color-active-square: var(--yellow-green);
-    --color-dark-active-square: var(--yellow-green-dark);
-    --color-text-square: var(--app-dark-gray);
-
-    --color-text: var(--app-white);
-    --color-sidebar: var(--app-dark-gray);
-    --sidebar-border: var(--app-gray-dark-border);
-  }
 }
 
 html.dark {
