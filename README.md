@@ -1,6 +1,6 @@
 # Chess.com - Front End Programming Challenge
 
-Demo: https://frontendtest-pflopez.vercel.app/
+Demo: https://frontendtest-cyan.vercel.app/
 
 ### To run locally:
 ```sh

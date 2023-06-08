@@ -65,6 +65,7 @@ export default defineComponent({
   outline: none;
   -webkit-tap-highlight-color: var(--color-active-square);
   padding: 0;
+  font-size: 1rem;
 }
 .square:focus-visible {
   outline: none;
