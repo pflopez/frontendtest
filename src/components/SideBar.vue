@@ -45,9 +45,10 @@ export default defineComponent({
   flex-direction: column;
 }
 .title {
-  padding: 10px;
+  padding: var(--app-padding-lg) var(--app-padding-lg) var(--app-padding-sm);
   font-weight: bold;
   white-space: nowrap;
+  z-index: 1;
 }
 .activity {
   list-style: none;

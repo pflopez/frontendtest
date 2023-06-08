@@ -53,7 +53,16 @@ export default defineComponent({
   main {
     padding: var(--app-padding-lg);
   }
+  .chess-board {
+    margin: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 50vh;
+    max-width: 70vw;
+  }
+}
 
+@media (min-width: 768px) {
   .chess-board {
     margin: auto;
     border-radius: 4px;
@@ -66,6 +75,7 @@ export default defineComponent({
     border-left: 1px solid var(--sidebar-border);
     padding-top: var(--app-padding-sm);
     padding-bottom: var(--app-padding-lg);
+    box-shadow: 5px -3px 8px -4px #33333333;
   }
 }
 </style>
