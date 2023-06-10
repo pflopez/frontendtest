@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue';
+import { defineComponent, type PropType, ref, watch } from 'vue';
 import { type Activity } from '@/types/activity';
 import ThemeToggle from '@/components/themeToggle.vue';
 
@@ -12,17 +12,23 @@ export default defineComponent({
       type: Array as PropType<Activity[]>
     }
   },
-  computed: {
-    activitySize() {
-      return this.activity.length;
-    }
-  },
-  watch: {
-    activitySize() {
-      // scroll to the last one
-      const el = this.$refs.activityScroller as HTMLElement;
-      el.scrollTop = el.scrollHeight;
-    }
+  setup(props) {
+    const activityScroller = ref<HTMLElement | null>(null);
+
+    watch(
+      () => props.activity.length,
+      () => {
+        const el = activityScroller.value;
+        if (el) {
+          el.scrollTop = el.scrollHeight;
+        }
+      },
+      { flush: 'post' }
+    );
+
+    return {
+      activityScroller
+    };
   }
 });
 </script>

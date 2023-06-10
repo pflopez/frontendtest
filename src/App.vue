@@ -15,8 +15,7 @@ export default defineComponent({
   methods: {
     setActive(square: Square) {
       const id = this.activity.length + 1;
-      const prevActivity = this.activity.filter((activity) => activity.square === square);
-      const on = !prevActivity[prevActivity.length - 1]?.on;
+      const on = !this.activeSquares.find((key) => key === square.key);
       this.activity.push({ id, square, on });
       if (on) {
         this.activeSquares.push(square.key);
